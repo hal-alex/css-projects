@@ -1,0 +1,59 @@
+main {
+    padding-top: 32px;
+}
+
+.plan-section {
+    display: inline-block;
+    width: 80%;
+    border: 2px solid #0e4f1f;
+    background: #87e8a1;
+    padding: 16px;
+    margin: 16px 0px;
+}
+
+.plan-section:hover,
+.plan-section:active {
+    box-shadow: 2px 2px 4px black;
+}
+
+
+.plan-section a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.plan-section__title {
+    color: black;
+    font-weight: bold;
+}
+
+.plan-section--featured {
+    background: #0e4f1f;
+}
+
+.plan-section__title.featured {
+    color: white;
+}
+
+.plan-section__summary {
+    color: darkgray;
+    font-weight: bold;
+}
+
+.plan-section__description {
+    background: white;
+    color: black;
+    padding: 16px;
+    border: 2px solid black;
+}
+
+#plus {
+    background: lightgreen;
+}
+
+#free {
+    background: light;
+    float: right;
+    text-align: right;
+}
