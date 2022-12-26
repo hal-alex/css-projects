@@ -2,6 +2,14 @@ main {
     padding-top: 32px;
 }
 
+.background {
+    background: url("../images/plans-background.jpg");
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
 .plan-section {
     display: inline-block;
     width: 80%;
@@ -9,6 +17,7 @@ main {
     background: #87e8a1;
     padding: 16px;
     margin: 16px 0px;
+    position: relative;
 }
 
 .plan-section:hover,
@@ -46,6 +55,13 @@ main {
     color: black;
     padding: 16px;
     border: 2px solid black;
+}
+
+.plan__badge {
+    position: absolute;
+    top: 50px;
+    left: 400px;
+    margin: 20px;
 }
 
 #plus {
