@@ -8,8 +8,8 @@ body {
 }
 
 .backdrop {
-    /* display: none; */
-    /* position: fixed; */
+    position: fixed;
+    display: none;
     top: 0;
     left: 0;
     z-index: 100;
@@ -24,7 +24,7 @@ body {
     top: 0;
     left: 0;
     background: #2ddf5c;
-    padding: 0.5 rem 1rem;
+    padding: 0.5rem 1rem;
     z-index: 1;
 }
 
@@ -70,7 +70,7 @@ body {
     text-decoration: none;
     color: #0e4f1f;
     font-weight: bold;
-    padding: 3px 0;
+    padding: 0.2rem 0;
 }
 
 .main-nav__item a:hover,
@@ -108,7 +108,7 @@ body {
 
 .main-footer__link {
     display: inline-block;
-    margin: 0 2rem;
+    margin: 0 1rem;
 }
 
 .main-footer__link a {
@@ -127,7 +127,7 @@ body {
     font: inherit;
     border: 1.5px solid #0e4f1f;
     padding: 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
 }
