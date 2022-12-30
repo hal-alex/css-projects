@@ -152,6 +152,13 @@ main {
     outline: none;
 }
 
+.button[disabled] {
+    cursor: not-allowed;
+    border: grey;
+    color: white;
+    background: grey;
+}
+
 .mobile-nav {
     display: none;
     position: fixed;
