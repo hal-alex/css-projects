@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "AnonymousPro";
+    src: url("AnonymousPro-Regular.ttf");
+}
+
 main {
     padding-top: 2rem;
 }
@@ -56,7 +61,7 @@ main {
     color: black;
     padding: 1rem;
     border: 2px solid black;
-    font-family: "Roboto", sans-serif;
+    font-family: "AnonymousPro", sans-serif;
 }
 
 .plan__badge {
