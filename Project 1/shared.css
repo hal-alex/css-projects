@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:400,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,900');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
 }
 
@@ -35,6 +35,9 @@ main {
     background: #2ddf5c;
     padding: 0.5rem 1rem;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main-header>div {
@@ -42,11 +45,32 @@ main {
     vertical-align: middle;
 }
 
+.toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+}
+
 .main-header__brand {
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5rem;
     height: 2.5rem;
     /* width: 20px; */
     display: inline-block;
@@ -59,10 +83,7 @@ main {
 }
 
 .main-nav {
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 150px);
-    vertical-align: middle;
+    display: none;
 }
 
 .main-nav__items {
@@ -91,7 +112,7 @@ main {
 }
 
 .main-nav__item--cta a,
-.mobile-nav__item--cat a {
+.mobile-nav__item--cta a {
     color: white;
     background: #ff1b68;
     padding: 0.5rem 1rem;
@@ -100,11 +121,24 @@ main {
 
 .main-nav__item--cta a:hover,
 .main-nav__item--cta a:active,
-.mobile-nav__item--cat a:hover,
-.mobile-nav__item--cat a:active {
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
     color: #ff1b68;
     background: white;
     border: none;
+}
+
+@media (min-width: 40rem) {
+    .toggle-button {
+        display: none;
+    }
+
+    .main-nav {
+        display: inline-block;
+        text-align: right;
+        width: calc(100% - 44px);
+        vertical-align: middle;
+    }
 }
 
 .main-footer {
@@ -121,8 +155,8 @@ main {
 }
 
 .main-footer__link {
-    display: inline-block;
-    margin: 0 1rem;
+    display: block;
+    margin: 1rem 0;
 }
 
 .main-footer__link a {
@@ -133,34 +167,6 @@ main {
 .main-footer__link a:hover,
 .main-footer__link a:active {
     color: #ccc;
-}
-
-.button {
-    background: #0e4f1f;
-    color: white;
-    font: inherit;
-    border: 1.5px solid #0e4f1f;
-    padding: 0.5rem;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.button:hover,
-.button:active {
-    background: white;
-    color: #0e4f1f;
-}
-
-.button:focus {
-    outline: none;
-}
-
-.button[disabled] {
-    cursor: not-allowed;
-    border: grey;
-    color: white;
-    background: grey;
 }
 
 .mobile-nav {
@@ -191,28 +197,41 @@ main {
     font-size: 1.5rem;
 }
 
-.toggle-button {
-    width: 3rem;
-    background: transparent;
-    border: none;
+.button {
+    background: #0e4f1f;
+    color: white;
+    font: inherit;
+    border: 1.5px solid #0e4f1f;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-weight: bold;
     cursor: pointer;
-    padding-top: 0;
-    padding-bottom: 0;
-    vertical-align: middle;
 }
 
-.toggle-button:focus {
+.button:hover,
+.button:active {
+    background: white;
+    color: #0e4f1f;
+}
+
+.button:focus {
     outline: none;
 }
 
-.toggle-button__bar {
-    width: 100%;
-    height: 0.2rem;
-    background: black;
-    display: block;
-    margin: 0.6rem 0;
+.button[disabled] {
+    cursor: not-allowed;
+    border: #a1a1a1;
+    background: #ccc;
+    color: #a1a1a1;
 }
 
 .open {
     display: block !important;
+}
+
+@media (min-width: 40rem) {
+    .main-footer__link {
+        display: inline-block;
+        margin: 0 1rem;
+    }
 }
