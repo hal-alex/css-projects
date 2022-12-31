@@ -12,13 +12,21 @@ body {
     background: #b3b3b3;
     padding: 5px;
     margin: 0;
-  }
-  
+}
+
 .flex-container {
     background: white;
     padding: 10px;
     border: 5px solid black;
-  }
+    height: 1400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-flow: row wrap; */
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
 
 .item-1 {
     background: #ff7300;
