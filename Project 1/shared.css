@@ -34,15 +34,10 @@ main {
     left: 0;
     background: #2ddf5c;
     padding: 0.5rem 1rem;
-    z-index: 1;
+    z-index: 60;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.main-header>div {
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .toggle-button {
@@ -71,14 +66,12 @@ main {
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
-    height: 2.5rem;
     /* width: 20px; */
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .main-header__brand img {
-    height: 100%;
+    height: 2.5rem;
+    vertical-align: middle;
     /* width: 100%; */
 }
 
@@ -90,10 +83,10 @@ main {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
 }
 
 .main-nav__item {
-    display: inline-block;
     margin: 0 1rem;
 }
 
@@ -134,10 +127,7 @@ main {
     }
 
     .main-nav {
-        display: inline-block;
-        text-align: right;
-        width: calc(100% - 44px);
-        vertical-align: middle;
+        display: flex;
     }
 }
 
@@ -151,12 +141,13 @@ main {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-footer__link {
-    display: block;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .main-footer__link a {
@@ -184,9 +175,11 @@ main {
     width: 90%;
     height: 100%;
     list-style: none;
-    margin: 10% auto;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-nav__item {
@@ -226,12 +219,17 @@ main {
 }
 
 .open {
-    display: block !important;
+    display: flex !important;
 }
 
 @media (min-width: 40rem) {
     .main-footer__link {
-        display: inline-block;
         margin: 0 1rem;
+    }
+
+    .main-footer__links {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 }
